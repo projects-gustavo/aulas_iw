@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarto Exercicio</title>
+</head>
+
+<body>
+    Digite o valor <strong>a</strong>: <input type="number" id="num1"> <br />
+    Digite o valor <strong>b</strong>: <input type="number" id="num2"> <br />
+    Digite o valor <strong>c</strong>: <input type="number" id="num3"> <br />
+    <button onclick="raiz()">Calcular</button>
+    <div id="resposta"></div>
+
+    <script>
+        function raiz() {
+            var a = parseFloat(document.getElementById("num1").value);
+            var b = parseFloat(document.getElementById("num2").value);
+            var c = parseFloat(document.getElementById("num3").value);
+            ans = document.getElementById('resposta');
+
+            var delta = (b * b) - 4 * a * c;
+
+            if (delta > 0) {
+                raiz1 = (-b + Math.sqrt(delta))(2 * a);
+                raiz2 = (-b - Math.sqrt(delta))(2 * a);
+
+                ans.innerHTML = "Raiz 1: " + raiz1 + "<br/>" + "Raiz 2: " + raiz2;
+            }
+            else {
+                if (delta == 0) {
+                    raiz = (-b + Math.sqrt(delta))(2 * a);
+                    ans.innerHTML = "Raiz dupla: " + raiz;
+                } else {
+                    real = (-b) / (2 * a);
+                    img1 = Math.sqrt(-delta) / (2 * a);
+                    img2 = - Math.sqrt(-delta) / (2 * a);
+
+                    ans.innerHTML = "Raiz 1: " + real + "+" + img1 + "<br/>" +
+                        "Raiz 2: " + real + "+" + img2
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
