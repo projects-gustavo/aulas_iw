@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sétimo Exercício</title>
+</head>
+
+<body>
+    <script>
+        var primeiro = 0
+        var segundo = 0
+
+        for (var cont = 1; cont <= 10; cont++) {
+            var num = Number(prompt('Digite dez números:'))
+            if (num % 2 == 1) {
+                primeiro = primeiro + 1
+            } else {
+                segundo = segundo + 1
+            }
+        }
+        document.write(`${primeiro} números ímpares<br>`)
+        document.write(`${segundo} números pares`)
+    </script>
+</body>
+
+</html>

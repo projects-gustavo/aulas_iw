@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo Exercício</title>
+</head>
+
+<body>
+    <script>
+        var a = 80000
+        var b = 200000
+        var cont = 0
+
+        while (b > a) {
+            a = a + ((a / 100) * 3)
+            b = b + ((b / 100) * 1.5)
+            cont++
+        }
+        alert(`Para igualar a população dos países, levará ${cont} anos.`) 
+    </script>
+</body>
+
+</html>

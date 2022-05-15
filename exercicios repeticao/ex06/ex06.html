@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sexto Exercício</title>
+</head>
+
+<body>
+    <script>
+        var base = Number(prompt('Digite a base:'))
+        var expoente = Number(prompt('Digite o expoente:'))
+        var resultado = 1
+        for (var cont = 1; cont <= expoente; cont ++) {
+            resultado *= base
+        }
+
+        document.write(`${base} elevado a ${expoente} = ${resultado}`)
+    </script>
+</body>
+
+</html>

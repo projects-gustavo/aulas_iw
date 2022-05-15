@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceiro Exercício</title>
+</head>
+
+<body>
+    <script>
+        var a = Number(prompt('Digite a população do primeiro país:'))
+        var b = Number(prompt('Digite a população do segundo país:'))
+        var primeirataxa = Number(prompt('Digite a taxa de crescimento da primeira população:'))
+        var segundataxa = Number(prompt('Digite a taxa de crescimento da segunda população:'))
+        var cont = 0
+
+        if (b > a) {
+            while (b > a) {
+                a = a + ((a / 100) * primeirataxa)
+                b = b + ((b / 100) * segundataxa)
+                cont++
+            }
+        }
+        else {
+            while (a > b) {
+                a = a + ((a / 100) * primeirataxa)
+                b = b + ((b / 100) * segundataxa)
+                cont++
+            }
+        }
+        alert(`Para igualar a população dos países, levará ${cont} anos.`) 
+    </script>
+</body>
+
+</html>
