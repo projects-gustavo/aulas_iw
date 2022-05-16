@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 01 - Vetores</title>
+</head>
+
+<body>
+    <script>
+        var num = [3, 6, 9] //vetor
+        console.log(num)
+        console.log(typeof (num)) //tipo da variável num, nesse caso é number
+        console.log(num[1])
+        num.push(12) //push serve para adicionar valor ao vetor
+        console.log(num)
+        console.log('Tamanho do Vetor =>', num.length) //length serve para ver o tamanho da variável num
+
+        var teste = [5, 8, 4]
+        console.log(teste)
+        console.log(teste.sort()) //mostra o vetor ordenado
+        console.log(teste)
+
+        var tam = teste.length
+        //Primeiro Exemplo:
+        for (var i = 0; i <= tam - 1; i++) { //tam = 3, como temos 3 valores no vetor e o vetor começa em 0, então 3 - 1 = 2 (2 é a última posição do vetor)
+            console.log('Posição i = ', i, ' valor=> ', teste[i])
+        }
+
+        //Segundo Exemplo:
+        for (var i in teste) {
+            console.log('Posição i = ', i, ' valor=> ', teste[i])
+        }
+
+        var valores = [8, 1, 7, 4, 2, 9]
+        console.log(valores.indexOf(7))
+        console.log(valores.indexOf(3)) //o resultado disso é -1, pois não existe o número 3 no vetor
+    </script>
+</body>
+
+</html>
